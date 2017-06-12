@@ -1,12 +1,17 @@
 <?php
 
-namespace Vitsyd\ServiceDiscovery\Client;
+namespace Vetal2409\ServiceDiscovery\Client;
 
 /**
  * Interface InstanceInterface
  */
 interface InstanceInterface
 {
+    /**
+     * @return string
+     */
+    public function getId();
+
     /**
      * @return string
      */
@@ -20,10 +25,15 @@ interface InstanceInterface
     /**
      * @return ApplicationInterface
      */
-    public function getApp();
+    public function getApplication();
 
     /**
      * @return DataCenterInterface
      */
     public function getDataCenter();
+
+    /**
+     * @return int
+     */
+    public function getPort();
 }

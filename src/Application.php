@@ -1,8 +1,6 @@
 <?php
 
-namespace Vitsyd\ServiceDiscovery\Client\Provider\Eureka;
-
-use Vitsyd\ServiceDiscovery\Client\ApplicationInterface;
+namespace Vetal2409\ServiceDiscovery\Client;
 
 /**
  * Class Application
@@ -12,7 +10,7 @@ class Application implements ApplicationInterface
     /**
      * @var string
      */
-    protected $name;
+    protected $id;
 
     /**
      * @var array
@@ -21,19 +19,19 @@ class Application implements ApplicationInterface
 
     /**
      * Application constructor.
-     * @param $name
+     * @param $id
      */
-    public function __construct($name)
+    public function __construct($id)
     {
-        $this->name = $name;
+        $this->id = $id;
     }
 
     /**
      * @inheritdoc
      */
-    public function getName()
+    public function getId()
     {
-        return $this->name;
+        return $this->id;
     }
 
     /**
@@ -42,5 +40,15 @@ class Application implements ApplicationInterface
     public function getInstances()
     {
         return $this->instances;
+    }
+
+    public function setInstances(array $instances)
+    {
+        $this->instances = $instances;
+    }
+
+    public function addInstance(InstanceInterface $instance)
+    {
+        $this->instances[] = $instance;
     }
 }

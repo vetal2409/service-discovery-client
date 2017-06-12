@@ -1,5 +1,5 @@
 {
-    "name": "vitsyd/service-discovery-client",
+    "name": "vetal2409/service-discovery-client",
     "description": "Service Discovery Client",
     "license": "MIT",
     "config": {
@@ -8,7 +8,7 @@
     "require": {
         "php": ">=5.6.0",
         "php-http/guzzle6-adapter": "^1.1",
-        "jms/serializer-bundle": "^1.1"
+        "jms/serializer": "^1.7"
     },
     "require-dev": {
     },
@@ -29,12 +29,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "Vitsyd\\ServiceDiscovery\\Client\\": "src/"
+            "Vetal2409\\ServiceDiscovery\\Client\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Vitsyd\\ServiceDiscovery\\Client\\Test\\": "test/src/"
+            "Vetal2409\\ServiceDiscovery\\Client\\Test\\": "test/src/"
         }
     },
     "extra": {

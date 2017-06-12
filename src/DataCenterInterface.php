@@ -1,6 +1,6 @@
 <?php
 
-namespace Vitsyd\ServiceDiscovery\Client;
+namespace Vetal2409\ServiceDiscovery\Client;
 
 /**
  * DataCenter Interface
@@ -10,5 +10,5 @@ interface DataCenterInterface
     /**
      * @return string
      */
-    public function getName();
+    public function getId();
 }
