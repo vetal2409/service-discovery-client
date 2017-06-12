@@ -66,8 +66,8 @@ class EurekaServiceDiscoveryClient implements ServiceDiscoveryClientInterface
                     '@class' => 'com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo',
                     'name' => $instance->getDataCenter()->getId()
                 ],
-                'homePageUrl' => $this->url . '/sd/info',
-                'statusPageUrl' => $this->url . '/sd/info'
+                'homePageUrl' => "http://{$instance->getIp()}:{$instance->getPort()}",
+                'statusPageUrl' => "http://{$instance->getIp()}:{$instance->getPort()}/sd/info"
             ]
         ];
         $json = $serializer->serialize($data, 'json');
